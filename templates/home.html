@@ -2,59 +2,43 @@
 <html>
   <head>  
     <title>Rajan careers</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <style>
-      h1{
-      font-size:40px;
-      font-family: roboto;
-      font-weight:normal;
-        color:rgb(100,100,100);
-        text-align:center;
-      }
       #banner{
+        height: 360px;
+      object-fit: cover;
         width: 100%;
-        height:360px;
-       object-fit:cover; 
         
       }
-      h2{
-        font-size:32px;
-        font-family: roboto;
-        font-weight :normal; 
-        color:rgb(100,100,100);
-        text-align:center; 
-        
-      }
-      p{
-        font: family roboto;
-        color:rgb(80,80,80);
-        
-      }
-  
-      #container{
-        max-width:720px;
-        margin: 0 auto;
-      }
-      
     </style>
+
   </head>
   <body>
-    <div id="container">
-    <h1>Rajans Careers</h1>
-    <img id="banner" 
+    <div class="container" >
+    <h1 class="text-center mt-2 mb-4">Rajans Careers</h1>
+    <img class="img-fluid" id="banner"
  src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGpvYnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60"/>
 
-  <h2>About Rajans</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra, justo tempor maximus dictum, libero turpis finibus justo, eu cursus justo mi in nisl. Mauris lacinia, mauris eget dictum vehicula, tortor odio feugiat purus, ac viverra sem justo et ipsum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas eget efficitur odio, laoreet malesuada erat. Cras sed odio dolor. Fusce scelerisque eros non orci scelerisque pulvinar. Fusce semper feugiat mi a consectetur. In interdum, eros eu finibus facilisis, ipsum est malesuada urna, ac eleifend neque enim vitae ante. Morbi id sagittis nisl.</p>
-      <h2>Open positions</h2>
+  <h2 class="text-center mt-2 mb-4">About Rajans</h2>
+  <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra, justo tempor maximus dictum, libero turpis finibus justo, eu cursus justo mi in nisl. Mauris lacinia, mauris eget dictum vehicula, tortor odio feugiat purus, ac viverra sem justo et ipsum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas eget efficitur odio, laoreet malesuada erat. Cras sed odio dolor. Fusce scelerisque eros non orci scelerisque pulvinar. Fusce semper feugiat mi a consectetur. In interdum, eros eu finibus facilisis, ipsum est malesuada urna, ac eleifend neque enim vitae ante. Morbi id sagittis nisl.</p>
+      <h2 class="text-center">Open positions</h2>
 
-    <p>
+    
+      <div>
+        
+      {% for job in jobs %}
       
-      Todo- show the  jobs
+        {% include 'jobitem.html' %}
+    
+      {% endfor %}
       
-    </p>
-<div style="text-align:center">
-    <button>Contact Us</button>
+      </div>
+    
+<div class="text-center" >
+    <button class="btn btn-primary btn-lg">Contact Us</button>
+  <p class="mt-4">Copyright 2022,Rajan </p>
     </div>
+      
     </div>
   </body>
 </html>
